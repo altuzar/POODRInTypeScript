@@ -28,15 +28,15 @@
 // # => {:chain=>"11-speed", :tire_size=>"23", :tape_color=>"red"}
 
 interface IOpts {
-  size: any;
-  tape_color: any;
+  size?: any;
+  tape_color?: any;
 }
 
 class Bicycle {
   private _size: any;
   private _tape_color: any;
 
-  public constructor(opts: IOpts) {
+  public constructor(opts: IOpts = {}) {
     this._size = opts.size;
     this._tape_color = opts.tape_color;
   }
